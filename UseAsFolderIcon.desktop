@@ -1,0 +1,11 @@
+[Desktop Entry]
+ServiceTypes=image/*
+Actions=UseAsFolderIcon
+Type=Service
+X-KDE-ServiceTypes=KonqPopupMenu/Plugin
+
+[Desktop Action UseAsFolderIcon]
+Name=Use as Folder Icon
+Name[de]=Als Ordner-Symbol benutzen
+Icon=preferences-desktop-icons
+Exec=echo "[Desktop Entry]\nIcon=./$(basename %f)" > `dirname %u`/.directory
